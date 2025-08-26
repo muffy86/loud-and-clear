@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loud & Clear - ASL Learning for Autism Spectrum</title>
+    <meta name="description" content="AI-powered gamified ASL learning platform designed for individuals with autism spectrum disorder">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Main Navigation -->
+    <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <h1 class="logo">🤟 Loud & Clear</h1>
+            <div class="nav-items">
+                <button id="homeBtn" class="nav-btn active" aria-label="Home">
+                    <span class="icon">🏠</span>
+                    <span class="text">Home</span>
+                </button>
+                <button id="learnBtn" class="nav-btn" aria-label="Learn ASL">
+                    <span class="icon">📚</span>
+                    <span class="text">Learn</span>
+                </button>
+                <button id="practiceBtn" class="nav-btn" aria-label="Practice">
+                    <span class="icon">🎯</span>
+                    <span class="text">Practice</span>
+                </button>
+                <button id="progressBtn" class="nav-btn" aria-label="Progress">
+                    <span class="icon">🏆</span>
+                    <span class="text">Progress</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="main-content" role="main">
+        <!-- Home Section -->
+        <section id="homeSection" class="section active" aria-labelledby="homeTitle">
+            <div class="welcome-container">
+                <h2 id="homeTitle" class="section-title">Welcome to Your ASL Journey! 🌟</h2>
+                <div class="user-stats">
+                    <div class="stat-card">
+                        <span class="stat-icon">📊</span>
+                        <span class="stat-value" id="totalProgress">0</span>
+                        <span class="stat-label">Signs Learned</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-icon">🔥</span>
+                        <span class="stat-value" id="streak">0</span>
+                        <span class="stat-label">Day Streak</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-icon">⭐</span>
+                        <span class="stat-value" id="totalStars">0</span>
+                        <span class="stat-label">Stars Earned</span>
+                    </div>
+                </div>
+                
+                <div class="quick-actions">
+                    <button class="action-btn primary" id="startLearning">
+                        <span class="btn-icon">🚀</span>
+                        Start Learning
+                    </button>
+                    <button class="action-btn secondary" id="continueProgress">
+                        <span class="btn-icon">▶️</span>
+                        Continue Where You Left Off
+                    </button>
+                </div>
+
+                <div class="ai-companion">
+                    <div class="companion-avatar">🤖</div>
+                    <div class="companion-message" id="companionMessage">
+                        Hi! I'm Alex, your AI learning companion. I'm here to help you learn ASL at your own pace. Ready to start?
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Learning Section -->
+        <section id="learnSection" class="section" aria-labelledby="learnTitle">
+            <h2 id="learnTitle" class="section-title">Learn New Signs 📚</h2>
+            <div class="lesson-container">
+                <div class="lesson-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="lessonProgress"></div>
+                    </div>
+                    <span class="progress-text">Lesson Progress</span>
+                </div>
+
+                <div class="lesson-content" id="lessonContent">
+                    <div class="lesson-card">
+                        <div class="sign-display">
+                            <div class="sign-image">
+                                <img id="signImage" src="" alt="ASL Sign" style="display: none;">
+                                <div class="sign-placeholder">👋</div>
+                            </div>
+                            <h3 class="sign-word" id="signWord">Hello</h3>
+                            <p class="sign-description" id="signDescription">
+                                A friendly greeting sign. Wave your hand with fingers spread apart.
+                            </p>
+                        </div>
+
+                        <div class="lesson-controls">
+                            <button class="control-btn" id="playDemo">
+                                <span class="btn-icon">▶️</span>
+                                Show Demo
+                            </button>
+                            <button class="control-btn" id="practiceSign">
+                                <span class="btn-icon">🎯</span>
+                                Practice This Sign
+                            </button>
+                            <button class="control-btn primary" id="nextSign">
+                                <span class="btn-icon">➡️</span>
+                                Next Sign
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Practice Section -->
+        <section id="practiceSection" class="section" aria-labelledby="practiceTitle">
+            <h2 id="practiceTitle" class="section-title">Practice Time! 🎯</h2>
+            <div class="practice-container">
+                <div class="practice-stats">
+                    <div class="practice-stat">
+                        <span class="stat-label">Accuracy</span>
+                        <span class="stat-value" id="accuracy">0%</span>
+                    </div>
+                    <div class="practice-stat">
+                        <span class="stat-label">Score</span>
+                        <span class="stat-value" id="practiceScore">0</span>
+                    </div>
+                </div>
+
+                <div class="practice-area">
+                    <div class="ai-feedback">
+                        <div class="feedback-avatar">🤖</div>
+                        <div class="feedback-message" id="feedbackMessage">
+                            Show me the sign for "Hello"! I'll use AI to analyze your gesture.
+                        </div>
+                    </div>
+
+                    <div class="video-practice">
+                        <div class="camera-placeholder">
+                            📹
+                            <p>Camera feed would appear here for AI-powered gesture recognition</p>
+                        </div>
+                    </div>
+
+                    <div class="practice-controls">
+                        <button class="control-btn" id="startPractice">
+                            <span class="btn-icon">🎥</span>
+                            Start Practice
+                        </button>
+                        <button class="control-btn secondary" id="skipPractice">
+                            <span class="btn-icon">⏭️</span>
+                            Skip for Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Progress Section -->
+        <section id="progressSection" class="section" aria-labelledby="progressTitle">
+            <h2 id="progressTitle" class="section-title">Your Amazing Progress! 🏆</h2>
+            <div class="progress-container">
+                <div class="achievements">
+                    <h3>Achievements Unlocked</h3>
+                    <div class="achievement-grid" id="achievementGrid">
+                        <!-- Achievements will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <div class="learning-path">
+                    <h3>Learning Path</h3>
+                    <div class="path-timeline" id="pathTimeline">
+                        <!-- Learning milestones will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <div class="statistics">
+                    <h3>Detailed Statistics</h3>
+                    <div class="stats-grid">
+                        <div class="detailed-stat">
+                            <span class="stat-icon">📅</span>
+                            <span class="stat-number" id="totalDays">0</span>
+                            <span class="stat-description">Days Learning</span>
+                        </div>
+                        <div class="detailed-stat">
+                            <span class="stat-icon">⏱️</span>
+                            <span class="stat-number" id="totalTime">0</span>
+                            <span class="stat-description">Minutes Practiced</span>
+                        </div>
+                        <div class="detailed-stat">
+                            <span class="stat-icon">🎯</span>
+                            <span class="stat-number" id="averageAccuracy">0%</span>
+                            <span class="stat-description">Average Accuracy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Positive Feedback Modal -->
+    <div id="feedbackModal" class="modal" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+        <div class="modal-content">
+            <h3 id="modalTitle">Great Job! 🌟</h3>
+            <div class="modal-body" id="modalBody">
+                You're doing amazing! Keep up the great work!
+            </div>
+            <button class="modal-btn" id="modalClose">Continue</button>
+        </div>
+    </div>
+
+    <!-- Loading indicator -->
+    <div id="loadingIndicator" class="loading-indicator" aria-hidden="true">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

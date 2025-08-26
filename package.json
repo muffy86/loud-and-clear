@@ -1,0 +1,39 @@
+{
+  "name": "loud-and-clear-asl",
+  "version": "1.0.0",
+  "description": "AI-powered gamified ASL learning platform designed for individuals with autism spectrum disorder",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "serve": "python3 -m http.server 8000"
+  },
+  "keywords": [
+    "ASL",
+    "autism",
+    "education",
+    "gamification",
+    "accessibility",
+    "sign-language",
+    "AI",
+    "learning"
+  ],
+  "author": "Loud & Clear Team",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/muffy86/loud-and-clear"
+  },
+  "homepage": "https://github.com/muffy86/loud-and-clear#readme",
+  "bugs": {
+    "url": "https://github.com/muffy86/loud-and-clear/issues"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie <= 11"
+  ]
+}
